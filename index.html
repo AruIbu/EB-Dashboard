@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Periodic Report – Chinmaya (mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F5F7}
+a{color:#1F3A5F}a:hover{color:#0F2340}
+.tab{display:inline-flex;align-items:center;min-height:48px;padding:0 16px;text-decoration:none;font-weight:500;font-size:14px;color:#4A5468;border-bottom:3px solid transparent}
+#eb-comments{scroll-margin-top:64px}
+.tab.on{color:#1F3A5F;border-bottom-color:#E8833A}
+@media (max-width:720px){[style*="repeat(4, minmax(0, 1fr))"],[style*="repeat(3, minmax(0, 1fr))"],[style*="repeat(2, minmax(0, 1fr))"]{grid-template-columns:1fr !important}}
+</style>
+</head>
+<body>
+<div id="view-main">
+<div style="min-height: 100vh; background: #F4F5F7; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1B2230; font-size: 15px">
+
+  <header style="background: #1F3A5F; color: #FFFFFF; padding: 14px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+    <div style="display: flex; align-items: center; gap: 14px">
+      <div style="width: 36px; height: 36px; border-radius: 8px; background: #E8833A; display: flex; align-items: center; justify-content: center; font-weight: 600; color: #1B2230">EB</div>
+      <div style="display: flex; flex-direction: column">
+        <span style="font-weight: 600; font-size: 16px">Periodic Report</span>
+        <span style="font-size: 13px; color: #C9D4E3">Chinmaya Vidyalaya · [School name]</span>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #C9D4E3">
+      <span>Signed in as</span>
+      <span style="background: #2C4B74; color: #FFFFFF; padding: 6px 12px; border-radius: 999px">Principal / SLT</span>
+    </div>
+  </header><nav aria-label="Report views" style="background:#FFFFFF;border-bottom:1px solid #DDE1E8;font-family:&quot;IBM Plex Sans&quot;,system-ui,sans-serif;position:sticky;top:0;z-index:5"><div style="max-width:1280px;margin:0 auto;padding:0 32px;display:flex;gap:4px;flex-wrap:wrap"><a class="tab" data-view="main" href="#overview">Subject &amp; chapter overview</a><a class="tab" data-view="section" href="#section">Section report – 10A</a></div></nav>
+
+  <main style="max-width: 1280px; margin: 0 auto; padding: 28px 32px 48px; display: flex; flex-direction: column; gap: 24px">
+
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <label for="f-month" style="font-size: 13px; color: #4A5468; font-weight: 500">Month</label>
+        <select id="f-month" style="height: 44px; min-width: 170px; padding: 0 12px; border: 1px solid #C6CCD6; border-radius: 8px; background: #FFFFFF; font: inherit; color: #1B2230">
+          <option>October 2026</option><option>September 2026</option><option>November 2026</option>
+        </select>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <label for="f-grade" style="font-size: 13px; color: #4A5468; font-weight: 500">Grade</label>
+        <select id="f-grade" style="height: 44px; min-width: 120px; padding: 0 12px; border: 1px solid #C6CCD6; border-radius: 8px; background: #FFFFFF; font: inherit; color: #1B2230">
+          <option>Grade 10</option><option>Grade 9</option><option>Grade 8</option><option>Grade 7</option><option>Grade 6</option>
+        </select>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 520px; min-width: 0">
+        <span style="font-size: 13px; color: #4A5468; font-weight: 500">Subject</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px">
+          <button type="button" class="subj" data-name="Science" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#1F3A5F;color:#FFFFFF;border:1px solid #1F3A5F">Science</button><button type="button" class="subj" data-name="Mathematics" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#FFFFFF;color:#1B2230;border:1px solid #C6CCD6">Mathematics</button><button type="button" class="subj" data-name="Social Science" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#FFFFFF;color:#1B2230;border:1px solid #C6CCD6">Social Science</button><button type="button" class="subj" data-name="English" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#FFFFFF;color:#1B2230;border:1px solid #C6CCD6">English</button><button type="button" class="subj" data-name="Hindi" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#FFFFFF;color:#1B2230;border:1px solid #C6CCD6">Hindi</button><button type="button" class="subj" data-name="AI" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#FFFFFF;color:#1B2230;border:1px solid #C6CCD6">AI</button><button type="button" class="subj" data-name="Physical Education" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#FFFFFF;color:#1B2230;border:1px solid #C6CCD6">Physical Education<span style="margin-left:6px;font-size:11px;padding:2px 6px;border-radius:4px;background:#E9ECF1;color:#4A5468">Non-EB</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+
+      <aside style="flex: 1 1 260px; max-width: 320px; background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 10px">
+        <div style="font-size: 13px; color: #4A5468; font-weight: 500">Chapters planned in October · <span class="subjName">Science</span></div>
+        <a href="#chapter" style="text-decoration: none; display: flex; flex-direction: column; gap: 4px; padding: 12px; border-radius: 8px; background: #EEF3FA; border: 1px solid #1F3A5F; color: #1B2230">
+          <span style="font-weight: 600">Ch 6 – Circulatory System</span>
+          <span style="font-size: 13px; color: #4A5468">27 Sep – 10 Oct · 4 sections</span>
+        </a>
+        <a href="#chapter" style="text-decoration: none; display: flex; flex-direction: column; gap: 4px; padding: 12px; border-radius: 8px; border: 1px solid #DDE1E8; color: #1B2230">
+          <span style="font-weight: 600">Ch 7 – [Chapter name]</span>
+          <span style="font-size: 13px; color: #4A5468">[Planned dates] · 4 sections</span>
+        </a>
+        <a href="#chapter" style="text-decoration: none; display: flex; flex-direction: column; gap: 4px; padding: 12px; border-radius: 8px; border: 1px solid #DDE1E8; color: #1B2230">
+          <span style="font-weight: 600">Ch 8 – [Chapter name]</span>
+          <span style="font-size: 13px; color: #4A5468">[Planned dates] · 4 sections</span>
+        </a>
+        <p style="margin: 6px 0 0; font-size: 12px; color: #5B6577; line-height: 1.5">Chapters come from the annual syllabus plan already ingested in the system.</p>
+      </aside>
+
+      <section id="chapter" style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+
+        <div style="background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 20px">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px">
+            <div style="display: flex; flex-direction: column; gap: 4px">
+              <span style="font-size: 13px; color: #4A5468">Grade 10 · <span class="subjName">Science</span></span>
+              <h1 style="margin: 0; font-family: 'IBM Plex Serif', Georgia, serif; font-weight: 600; font-size: 28px; color: #1F3A5F">Ch 6 – Circulatory System</h1>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+              <span style="font-size: 13px; color: #4A5468; align-self: center">Exams relevant:</span>
+              <span style="font-size: 13px; padding: 6px 10px; border-radius: 999px; background: #FCEBDD; color: #8A3E0B">Midterm · Oct</span>
+              <span style="font-size: 13px; padding: 6px 10px; border-radius: 999px; background: #FCEBDD; color: #8A3E0B">Half Yearly · Dec</span>
+              <span style="font-size: 13px; padding: 6px 10px; border-radius: 999px; background: #FCEBDD; color: #8A3E0B">Annual · Mar</span>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+            <div style="background: #F7F8FA; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 4px">
+              <span style="font-size: 12px; color: #4A5468">Planned start</span>
+              <span style="font-weight: 600">27 Sep 2026</span>
+            </div>
+            <div style="background: #F7F8FA; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 4px">
+              <span style="font-size: 12px; color: #4A5468">Actual start</span>
+              <span style="font-weight: 600">29 Sep 2026</span>
+            </div>
+            <div style="background: #F7F8FA; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 4px">
+              <span style="font-size: 12px; color: #4A5468">Planned end</span>
+              <span style="font-weight: 600">10 Oct 2026</span>
+            </div>
+            <div style="background: #F7F8FA; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 4px">
+              <span style="font-size: 12px; color: #4A5468">Actual end</span>
+              <span style="font-weight: 600; color: #5B6577">NA</span>
+            </div>
+          </div>
+          <p style="margin: 0; font-size: 12px; color: #5B6577">Actual dates show NA for chapters not started, or not yet ended.</p>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+            <h2 style="margin: 0; font-size: 18px; font-weight: 600">Sections</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+              <button type="button" class="filt" data-f="All" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#1F3A5F;color:#FFFFFF;border:1px solid #1F3A5F">All</button><button type="button" class="filt" data-f="Not started" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#FFFFFF;color:#1B2230;border:1px solid #C6CCD6">Not started</button><button type="button" class="filt" data-f="In progress" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#FFFFFF;color:#1B2230;border:1px solid #C6CCD6">In progress</button><button type="button" class="filt" data-f="Completed" style="min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#FFFFFF;color:#1B2230;border:1px solid #C6CCD6">Completed</button>
+            </div>
+          </div>
+          <div style="overflow-x: auto">
+            <table style="width: 100%; border-collapse: collapse; min-width: 880px; font-size: 14px">
+              <thead>
+                <tr style="text-align: left; color: #4A5468; font-size: 13px">
+                  <th style="padding: 10px 12px; border-bottom: 1px solid #DDE1E8; font-weight: 500">Section</th>
+                  <th style="padding: 10px 12px; border-bottom: 1px solid #DDE1E8; font-weight: 500">Teacher</th>
+                  <th style="padding: 10px 12px; border-bottom: 1px solid #DDE1E8; font-weight: 500">Chapter status</th>
+                  <th style="padding: 10px 12px; border-bottom: 1px solid #DDE1E8; font-weight: 500">Lesson plan</th>
+                  <th style="padding: 10px 12px; border-bottom: 1px solid #DDE1E8; font-weight: 500">Chapter verification</th>
+                  <th style="padding: 10px 12px; border-bottom: 1px solid #DDE1E8; font-weight: 500">Teacher comments</th>
+                  <th style="padding: 10px 12px; border-bottom: 1px solid #DDE1E8; font-weight: 500">EB action</th>
+                  <th style="padding: 10px 12px; border-bottom: 1px solid #DDE1E8; font-weight: 500"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Report</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-status="In progress"><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;font-weight:600">A</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4">Tr. Anju</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:4px 10px;border-radius:999px;font-size:13px;font-weight:500;background:#FDF1D6;color:#7A5300">In progress</span></td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;color:#1C6B45">Uploaded</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;color:#1C6B45">Done</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4">Yes (2)</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:4px 10px;border-radius:999px;font-size:13px;font-weight:500;background:#DDF0E6;color:#1C6B45">Action taken</span></td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;text-align:right"><a href="#section" style="display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:8px;border:1px solid #1F3A5F;color:#1F3A5F;text-decoration:none;font-weight:500;font-size:13px;white-space:nowrap">View progress report</a></td></tr><tr data-status="Completed"><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;font-weight:600">B</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4">Tr. Manju</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:4px 10px;border-radius:999px;font-size:13px;font-weight:500;background:#DDF0E6;color:#1C6B45">Completed</span></td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;color:#A33A16">Not uploaded</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;color:#A33A16">Pending</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4">No</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4"><span style="color:#5B6577">—</span></td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;text-align:right"><a href="#section" style="display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:8px;border:1px solid #1F3A5F;color:#1F3A5F;text-decoration:none;font-weight:500;font-size:13px;white-space:nowrap">View progress report</a></td></tr><tr data-status="In progress"><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;font-weight:600">C</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4">[Teacher name]</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:4px 10px;border-radius:999px;font-size:13px;font-weight:500;background:#FDF1D6;color:#7A5300">In progress</span></td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;color:#1C6B45">Uploaded</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;color:#A33A16">Pending</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4">Yes (1)</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:4px 10px;border-radius:999px;font-size:13px;font-weight:500;background:#FDF1D6;color:#7A5300">In review</span></td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;text-align:right"><a href="#section" style="display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:8px;border:1px solid #1F3A5F;color:#1F3A5F;text-decoration:none;font-weight:500;font-size:13px;white-space:nowrap">View progress report</a></td></tr><tr data-status="Not started"><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;font-weight:600">D</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4">[Teacher name]</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:4px 10px;border-radius:999px;font-size:13px;font-weight:500;background:#ECEEF2;color:#4A5468">Not started</span></td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;color:#5B6577">NA</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;color:#5B6577">NA</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4">NA</td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4"><span style="color:#5B6577">NA</span></td><td style="padding:14px 12px;border-bottom:1px solid #EEF0F4;text-align:right"><span style="font-size:13px;color:#5B6577">Report after start</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end">
+            <button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 8px; border: 1px solid #C6CCD6; background: #FFFFFF; font: inherit; font-size: 14px; color: #1B2230; display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download CSV</button>
+            <button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 8px; border: 1px solid #1F3A5F; background: #1F3A5F; font: inherit; font-size: 14px; color: #FFFFFF; display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download PDF</button>
+          </div>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; align-items: center; gap: 10px">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+            <h2 style="margin: 0; font-size: 18px; font-weight: 600">Automatic notifications</h2>
+          </div>
+          <p style="margin: 0; font-size: 14px; color: #4A5468">Sent to teachers and students to help them focus on the Diagnostic Test (DT).</p>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+            <div style="border: 1px solid #DDE1E8; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-size: 12px; font-weight: 600; color: #8A3E0B">1 · 3 days before</span>
+              <span style="font-size: 14px">Planned start date of the chapter is approaching</span>
+            </div>
+            <div style="border: 1px solid #DDE1E8; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-size: 12px; font-weight: 600; color: #8A3E0B">2 · In progress</span>
+              <span style="font-size: 14px">Teacher marks the chapter as in progress</span>
+            </div>
+            <div style="border: 1px solid #DDE1E8; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-size: 12px; font-weight: 600; color: #8A3E0B">3 · Completed</span>
+              <span style="font-size: 14px">Teacher marks the chapter as completed</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+</div>
+</div>
+<div id="view-section" hidden>
+<div style="min-height: 100vh; background: #F4F5F7; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1B2230; font-size: 15px">
+
+  <header style="background: #1F3A5F; color: #FFFFFF; padding: 14px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+    <div style="display: flex; align-items: center; gap: 14px">
+      <div style="width: 36px; height: 36px; border-radius: 8px; background: #E8833A; display: flex; align-items: center; justify-content: center; font-weight: 600; color: #1B2230">EB</div>
+      <div style="display: flex; flex-direction: column">
+        <span style="font-weight: 600; font-size: 16px">Periodic Report</span>
+        <span style="font-size: 13px; color: #C9D4E3">Chinmaya Vidyalaya · [School name]</span>
+      </div>
+    </div>
+    <span style="background: #2C4B74; color: #FFFFFF; padding: 6px 12px; border-radius: 999px; font-size: 13px">Principal / SLT</span>
+  </header><nav aria-label="Report views" style="background:#FFFFFF;border-bottom:1px solid #DDE1E8;font-family:&quot;IBM Plex Sans&quot;,system-ui,sans-serif;position:sticky;top:0;z-index:5"><div style="max-width:1280px;margin:0 auto;padding:0 32px;display:flex;gap:4px;flex-wrap:wrap"><a class="tab" data-view="main" href="#overview">Subject &amp; chapter overview</a><a class="tab" data-view="section" href="#section">Section report – 10A</a></div></nav>
+
+  <main style="max-width: 1280px; margin: 0 auto; padding: 24px 32px 48px; display: flex; flex-direction: column; gap: 20px">
+
+    <a href="#overview" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; align-self: flex-start; text-decoration: none; font-weight: 500; font-size: 14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>Back to Grade 10 Science sections</a>
+
+    <div style="background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 18px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span style="font-size: 13px; color: #4A5468">Report on the progress of chapter</span>
+          <h1 style="margin: 0; font-family: 'IBM Plex Serif', Georgia, serif; font-weight: 600; font-size: 28px; color: #1F3A5F">Ch 6 – Circulatory System</h1>
+        </div>
+        <span style="display: inline-block; padding: 6px 14px; border-radius: 999px; font-size: 14px; font-weight: 500; background: #DDF0E6; color: #1C6B45">Completed</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #F7F8FA">Grade <b style="font-weight: 600">10</b></span>
+        <span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #F7F8FA">Section <b style="font-weight: 600">A</b></span>
+        <span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #F7F8FA">Subject <b style="font-weight: 600">Science</b></span>
+        <span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #FCEBDD; color: #8A3E0B">Relevant exam: Midterm</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <h2 style="margin: 0; font-size: 16px; font-weight: 600">Plan &amp; status</h2>
+        <div style="display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px 14px; align-items: center; font-size: 13px">
+          <span style="color: #4A5468">Planned</span>
+          <div style="position: relative; height: 28px; background: #F0F2F5; border-radius: 6px">
+            <div style="position: absolute; left: 0%; width: 76%; top: 0; bottom: 0; background: #C9D4E3; border-radius: 6px; display: flex; align-items: center; padding: 0 10px; font-weight: 500; color: #1F3A5F">27 Sep – 10 Oct 2026</div>
+          </div>
+          <span style="color: #4A5468">Actual</span>
+          <div style="position: relative; height: 28px; background: #F0F2F5; border-radius: 6px">
+            <div style="position: absolute; left: 12%; width: 88%; top: 0; bottom: 0; background: #1F3A5F; border-radius: 6px; display: flex; align-items: center; padding: 0 10px; font-weight: 500; color: #FFFFFF">29 Sep – 12 Oct 2026</div>
+          </div>
+        </div>
+        <p style="margin: 0; font-size: 13px; color: #7A3A12">Started 2 days late · ended 2 days after planned end</p>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+
+      <div style="background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+        <h2 style="margin: 0; font-size: 18px; font-weight: 600">Teacher-based information</h2>
+        <div style="display: flex; align-items: center; gap: 12px">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #EEF3FA; color: #1F3A5F; display: flex; align-items: center; justify-content: center; font-weight: 600">A</div>
+          <div style="display: flex; flex-direction: column">
+            <span style="font-weight: 600">Tr. Anju</span>
+            <span style="font-size: 13px; color: #4A5468">Science · Grade 10A</span>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+          <div style="background: #F7F8FA; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 2px">
+            <span style="font-size: 12px; color: #4A5468">Logged in</span><span style="font-weight: 600; color: #1C6B45">Yes</span>
+          </div>
+          <div style="background: #F7F8FA; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 2px">
+            <span style="font-size: 12px; color: #4A5468">Sections visited</span><span style="font-weight: 600">[X] of [Y]</span>
+          </div>
+          <div style="background: #F7F8FA; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 2px">
+            <span style="font-size: 12px; color: #4A5468">Chapter / lesson plan</span><span style="font-weight: 600; color: #1C6B45">Available</span>
+          </div>
+          <div style="background: #F7F8FA; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 2px">
+            <span style="font-size: 12px; color: #4A5468">Chapter verification</span><span style="font-weight: 600; color: #1C6B45">Done</span>
+          </div>
+        </div>
+        <div style="border: 1px solid #DDE1E8; border-radius: 8px; padding: 14px; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+          <span style="font-size: 14px">Comments on chapter: <b style="font-weight: 600">Yes (2)</b></span>
+          <a href="#eb-comments" style="font-size: 14px; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center">See EB actions</a>
+        </div>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+        <h2 style="margin: 0; font-size: 18px; font-weight: 600">Test analysis by teacher</h2>
+        <div style="display: flex; flex-direction: column; gap: 0">
+          <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #EEF0F4"><span style="color: #4A5468">Test results verified (Reports)</span><span style="font-weight: 600; color: #1C6B45">Yes</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #EEF0F4"><span style="color: #4A5468">Personalised comments on results</span><span style="font-weight: 600">[N] students</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #EEF0F4"><span style="color: #4A5468">Class learning gap identified</span><span style="font-weight: 600">[Gap]</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+          <div style="border: 1px solid #DDE1E8; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+            <span style="font-size: 12px; font-weight: 600; color: #4A5468">Constructivism</span>
+            <span style="font-size: 14px">Notes created: <b style="font-weight: 600">[N]</b></span>
+            <span style="font-size: 14px">Tests / assignments: <b style="font-weight: 600">[N]</b></span>
+          </div>
+          <div style="border: 1px solid #DDE1E8; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+            <span style="font-size: 12px; font-weight: 600; color: #4A5468">Intervention plans</span>
+            <span style="font-size: 14px">Comments on shared materials: <b style="font-weight: 600">[N]</b></span>
+            <span style="font-size: 14px">IEP / ALP attached to IASPIRE: <b style="font-weight: 600">[N]</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="eb-comments" style="background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <h2 style="margin: 0; font-size: 18px; font-weight: 600">Teacher comments &amp; EB actions</h2>
+          <span style="font-size: 13px; color: #4A5468">Teacher – EB collaboration on this chapter</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px">
+          <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #F0F2F5">Comments <b style="font-weight: 600">2</b></span>
+          <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #DDF0E6; color: #1C6B45">Action taken <b style="font-weight: 600">1</b></span>
+          <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #FDF1D6; color: #7A5300">In review <b style="font-weight: 600">1</b></span>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="border: 1px solid #DDE1E8; border-radius: 10px; padding: 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-size: 12px; font-weight: 600; color: #4A5468">Tr. Anju · [Date]</span>
+            <span style="font-size: 14px">[Teacher's comment on the chapter – e.g. an error in a question, missing content, a suggestion]</span>
+            <span style="font-size: 12px; color: #4A5468">On: [Section / question / resource]</span>
+          </div>
+          <div style="background: #F7F8FA; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; justify-content: space-between; gap: 8px; align-items: center">
+              <span style="font-size: 12px; font-weight: 600; color: #1F3A5F">EduBrisk · [Date]</span>
+              <span style="font-size: 12px; padding: 3px 10px; border-radius: 999px; font-weight: 500; background: #DDF0E6; color: #1C6B45">Action taken</span>
+            </div>
+            <span style="font-size: 14px">[EB action taken – e.g. answer corrected, content added]</span>
+          </div>
+        </div>
+        <div style="border: 1px solid #DDE1E8; border-radius: 10px; padding: 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-size: 12px; font-weight: 600; color: #4A5468">Tr. Anju · [Date]</span>
+            <span style="font-size: 14px">[Teacher's comment on the chapter]</span>
+            <span style="font-size: 12px; color: #4A5468">On: [Section / question / resource]</span>
+          </div>
+          <div style="background: #F7F8FA; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; justify-content: space-between; gap: 8px; align-items: center">
+              <span style="font-size: 12px; font-weight: 600; color: #1F3A5F">EduBrisk · [Date]</span>
+              <span style="font-size: 12px; padding: 3px 10px; border-radius: 999px; font-weight: 500; background: #FDF1D6; color: #7A5300">In review</span>
+            </div>
+            <span style="font-size: 14px">[Forwarded to content team – expected by [Date]]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <h2 style="margin: 0; font-size: 18px; font-weight: 600">Student usage</h2>
+          <span style="font-size: 13px; color: #4A5468">FA = first attempt · LA = latest attempt · every score opens the attempt</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+          <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #F0F2F5">Total <b style="font-weight: 600">44</b></span>
+          <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #DDF0E6; color: #1C6B45">HA <b style="font-weight: 600">[n]</b></span>
+          <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #FDF1D6; color: #7A5300">MA <b style="font-weight: 600">[n]</b></span>
+          <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #FBE3DA; color: #8A2E0E">LA <b style="font-weight: 600">[n]</b></span>
+          <button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 8px; border: 1px solid #C6CCD6; background: #FFFFFF; font: inherit; font-size: 14px; color: #1B2230; display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>CSV</button>
+        </div>
+      </div>
+      <div style="overflow-x: auto">
+        <table style="width: 100%; border-collapse: collapse; min-width: 1080px; font-size: 13px">
+          <thead>
+            <tr style="text-align: left; color: #4A5468">
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">S No</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">Student</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">ID</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">Cat.</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">Log in</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">DT</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">DT remarks</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">RQ 1</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">RQ 2</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">LCQ</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">SLP</th>
+              <th style="padding: 10px; border-bottom: 1px solid #DDE1E8; font-weight: 500">TIP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="vertical-align:top"><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4">1</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;font-weight:500">[Student name]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#4A5468">[ID]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:2px 8px;border-radius:999px;font-weight:500;background:#DDF0E6;color:#1C6B45">HA</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#1C6B45;font-weight:500">Yes</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4">Yes</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#4A5468">—</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA 5/15</a><br><span style="color:#4A5468">LA 12/15</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA 5/15</a><br><span style="color:#4A5468">LA 12/15</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA 5/15</a><br><span style="color:#4A5468">LA 12/15</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><a href="#section">Open</a></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><a href="#section">Open</a></td></tr><tr style="vertical-align:top"><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4">2</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;font-weight:500">[Student name]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#4A5468">[ID]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:2px 8px;border-radius:999px;font-weight:500;background:#DDF0E6;color:#1C6B45">HA</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#1C6B45;font-weight:500">Yes</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4">Yes</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#4A5468">—</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA [x/15]</a><br><span style="color:#4A5468">LA [x/15]</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA [x/15]</a><br><span style="color:#4A5468">LA [x/15]</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA [x/15]</a><br><span style="color:#4A5468">LA [x/15]</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><a href="#section">Open</a></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;width:44px;height:20px;border:1px dashed #C6CCD6;border-radius:4px"></span></td></tr><tr style="vertical-align:top"><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4">3</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;font-weight:500">[Student name]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#4A5468">[ID]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:2px 8px;border-radius:999px;font-weight:500;background:#FDF1D6;color:#7A5300">MA</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#1C6B45;font-weight:500">Yes</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4">Yes</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#4A5468">[Remark]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA [x/15]</a><br><span style="color:#4A5468">LA [x/15]</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA [x/15]</a><br><span style="color:#4A5468">LA [x/15]</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA [x/15]</a><br><span style="color:#4A5468">LA [x/15]</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;width:44px;height:20px;border:1px dashed #C6CCD6;border-radius:4px"></span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;width:44px;height:20px;border:1px dashed #C6CCD6;border-radius:4px"></span></td></tr><tr style="vertical-align:top"><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4">4</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;font-weight:500">[Student name]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#4A5468">[ID]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:2px 8px;border-radius:999px;font-weight:500;background:#FBE3DA;color:#8A2E0E">LA</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#A33A16;font-weight:500">No</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4">No</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#4A5468">Not attempted</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA —</a><br><span style="color:#4A5468">LA —</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA —</a><br><span style="color:#4A5468">LA —</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA —</a><br><span style="color:#4A5468">LA —</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><a href="#section">Open</a></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><a href="#section">Open</a></td></tr><tr style="vertical-align:top"><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4">5</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;font-weight:500">[Student name]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#4A5468">[ID]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;padding:2px 8px;border-radius:999px;font-weight:500;background:#FBE3DA;color:#8A2E0E">LA</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#1C6B45;font-weight:500">Yes</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4">Yes</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;color:#4A5468">[Remark]</td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA [x/15]</a><br><span style="color:#4A5468">LA [x/15]</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA [x/15]</a><br><span style="color:#4A5468">LA [x/15]</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4;line-height:1.5"><a href="#section">FA [x/15]</a><br><span style="color:#4A5468">LA [x/15]</span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><span style="display:inline-block;width:44px;height:20px;border:1px dashed #C6CCD6;border-radius:4px"></span></td><td style="padding:12px 10px;border-bottom:1px solid #EEF0F4"><a href="#section">Open</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <span style="font-size: 13px; color: #4A5468">Showing 5 of 44 students · each score shows date and time taken (x/y) on hover · empty box = SLP / TIP not yet available</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+      <div style="background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+        <h2 style="margin: 0; font-size: 18px; font-weight: 600">Areas to improve</h2>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="background: #F7F8FA; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 4px">
+            <span style="font-weight: 600; font-size: 14px">Students with special needs</span>
+            <span style="font-size: 14px; color: #4A5468">[Students and support needed]</span>
+          </div>
+          <div style="background: #F7F8FA; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 4px">
+            <span style="font-weight: 600; font-size: 14px">Platform usage</span>
+            <span style="font-size: 14px; color: #4A5468">[Students with low usage, with time period]</span>
+          </div>
+        </div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #DDE1E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+        <h2 style="margin: 0; font-size: 18px; font-weight: 600">Expected evidence by learner category</h2>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; gap: 12px; align-items: flex-start">
+            <span style="flex: none; padding: 4px 10px; border-radius: 999px; font-size: 13px; font-weight: 500; background: #DDF0E6; color: #1C6B45">HA</span>
+            <span style="font-size: 14px">Attempt CBQs and HOTS in the Celebrate phase</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start">
+            <span style="flex: none; padding: 4px 10px; border-radius: 999px; font-size: 13px; font-weight: 500; background: #FDF1D6; color: #7A5300">MA</span>
+            <span style="font-size: 14px; color: #4A5468">[Mandatory areas to be defined]</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start">
+            <span style="flex: none; padding: 4px 10px; border-radius: 999px; font-size: 13px; font-weight: 500; background: #FBE3DA; color: #8A2E0E">LA</span>
+            <span style="font-size: 14px">Use Templates</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</div>
+<script>
+var ON='min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#1F3A5F;color:#FFFFFF;border:1px solid #1F3A5F',OFF='min-height:44px;padding:0 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;background:#FFFFFF;color:#1B2230;border:1px solid #C6CCD6';
+function route(){var h=location.hash,sec=(h==='#section'||h==='#eb-comments');document.getElementById('view-main').hidden=sec;document.getElementById('view-section').hidden=!sec;
+document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',(t.dataset.view==='section')===sec)});
+if(h==='#eb-comments'){setTimeout(function(){document.getElementById('eb-comments').scrollIntoView({behavior:'smooth'})},50)}else{window.scrollTo(0,0)}}
+window.addEventListener('hashchange',route);route();
+document.querySelectorAll('.filt').forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;document.querySelectorAll('.filt').forEach(function(x){x.setAttribute('style',x===b?ON:OFF)});document.querySelectorAll('tr[data-status]').forEach(function(r){r.hidden=!(f==='All'||r.dataset.status===f)})})});
+document.querySelectorAll('.subj').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.subj').forEach(function(x){x.setAttribute('style',x===b?ON:OFF)});document.querySelectorAll('.subjName').forEach(function(x){x.textContent=b.dataset.name})})});
+document.querySelectorAll('a[href="#chapter"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();document.getElementById('chapter').scrollIntoView({behavior:'smooth'})})});
+</script>
+</body>
+</html>
